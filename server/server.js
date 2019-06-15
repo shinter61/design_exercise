@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import webpackConfig from '../webpack.config.dev.babel';
 import webpackMiddleware from 'webpack-dev-middleware';
 import HMR from 'webpack-hot-middleware';
+const path = require('path');
 
 const app = express();
 
@@ -15,6 +16,14 @@ app.use(HMR(compiler));
 app.get('/', (req, res)=>{
   const index = fs.readFileSync('./public/index.html', 'utf-8');
   res.send(index);
+});
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 //3000番ポートを使ってサーバーを立ち上げ

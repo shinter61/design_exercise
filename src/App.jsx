@@ -1,8 +1,21 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
-const App = ()=>(
-  <h1>Hello React!!</h1>
-);
+import Top from './TopPage/Top.jsx';
+import Paspol from './Paspol/Paspol.jsx';
+
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/top' component={Top} />
+          <Route exact path='/paspol' component={Paspol} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+}
 
 export default App;

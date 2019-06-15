@@ -12,6 +12,9 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins:[
     new webpack.HotModuleReplacementPlugin()
   ],
