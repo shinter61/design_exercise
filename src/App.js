@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Paspol from './Paspol.jsx'
+
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Route exact path='/' component={App} />
+          <Route path='/pas-pol' component={Paspol} />
+          {/* <Link to='/'>トップへ</Link>
+          <Link to='/pas-pol'>pas-pol の模写ページへ</Link> */}
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
