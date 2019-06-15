@@ -26,7 +26,22 @@ export default {
       {
         test: /\.jsx?$/,
         use:{
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          query: {
+            babelrc: false,
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ],
+            plugins: [
+              ['@babel/plugin-proposal-decorators', {
+                legacy: true
+              }],
+              ['@babel/plugin-proposal-class-properties', {
+                loose: true
+              }]
+            ]
+          }
         },
         include: path.resolve(__dirname, 'src')
       },
