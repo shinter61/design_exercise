@@ -35,9 +35,16 @@ export default {
           },
           {
             loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
           }
         ]
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: 'url-loader'
+      },
     ]
   }
 };
