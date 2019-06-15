@@ -26,6 +26,17 @@ export default {
           loader: 'babel-loader'
         },
         include: path.resolve(__dirname, 'src')
+      },
+      {
+        test: /\.(css|scss)$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
     ]
   }
