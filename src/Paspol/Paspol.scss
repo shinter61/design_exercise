@@ -1,3 +1,20 @@
 p {
   color: aqua;
 }
+
+.imageSlideShow {
+  img {
+    height: 455px;
+    width: 100%;
+    border-bottom-right-radius: 50% 40px;
+    border-bottom-left-radius: 50% 40px;
+    position: absolute;
+    top: 0px;
+  }
+  img#slideshowPrev {
+    z-index: 99;
+  }
+  img#slideshowNext {
+    z-index: 1;
+  }
+}
