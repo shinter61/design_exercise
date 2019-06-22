@@ -8,6 +8,7 @@ import image5 from '../../public/image/paspol5.jpg';
 
 let m = 1
 let n = 0
+
 export default class Paspol extends React.Component {
   constructor() {
     super();
@@ -26,28 +27,25 @@ export default class Paspol extends React.Component {
   fadeout = () => {
     if (m < 0) {
       clearTimeout()
-      console.log('フェードアウト終了')
       m = 1;
       return
     }
     m -= 0.01;
     document.getElementById('slideshowPrev').style.opacity = m;
-    console.log(document.getElementById('slideshowPrev').style.opacity)
     setTimeout(() => {this.fadeout()}, 20);
   }
 
   fadein = () => {
     if (n > 1) {
       clearTimeout()
-      console.log('フェードイン終了')
       n = 0;
       return
     }
     n += 0.01;
     document.getElementById('slideshowNext').style.opacity = n;
-    console.log(document.getElementById('slideshowNext').style.opacity)
     setTimeout(() => {this.fadein()}, 20);
   }
+
   slideShow = () => {
     const imageArr = [image1, image2, image3, image4, image5]
     let num = this.state.imageId
@@ -71,15 +69,45 @@ export default class Paspol extends React.Component {
 
   render() {
     return (
-      <>
+      <div className='paspol'>
         <div className='abovePage'>
+          <div className='header'>
+            <div className='title'>
+              <p id='title'>PAS-POL</p>
+              <p>旅のものづくりブランド</p>
+            </div>
+            <ul>
+              <li>TOP</li>
+              <li>PRODUCT</li>
+              <li>ABOUT</li>
+              <li>NEWS</li>
+              <li>CONTACT</li>
+            </ul>
+          </div>
           <div className='imageSlideShow'>
             <img id='slideshowPrev' src={image1} style={{opacity: 1}}/>
             <img id='slideshowNext' src={image2} style={{opacity: 0}}/>
           </div>
+          <div className='declaration'>
+            <div className='brief-text'>
+              <p id='tabi'>旅に出よう。</p>
+              <p>僕たちが作りたいのは
+              <br/>持っているだけで旅に出たくなるモノ。
+              <br/>持っているだけでわくわくするモノ。</p>
+              <p>それは新しい時代の “パスポート”
+              <br/>僕たちが作るものは、
+              <br/>そんな、存在でありたい。</p>
+              <p>そして、人と人が繋がる
+              <br/>こんな時代だからこそ、
+              <br/>僕たちは、みんなでひとつのモノを
+              <br/>作ることを追求したい。</p>
+              <p id='company-name'>「 PAS-POL 」</p>
+              <p>それは、自分と世界を繋げる
+              <br/>旅のモノづくりブランド</p>
+            </div>
+          </div>
         </div>
-        <p>hello from paspol</p>
-      </>
+      </div>
     );
   }
 }
