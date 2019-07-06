@@ -69,13 +69,14 @@ export default class Paspol extends React.Component {
 
   render() {
     return (
+      <>
       <div className='paspol'>
         <div className='abovePage'>
           <div className='header'>
             <div className='title'>
               <p id='title'>PAS-POL</p>
               <p>旅のものづくりブランド</p>
-            </div>
+            </div> { /* title */ }
             <ul>
               <li>TOP</li>
               <li>PRODUCT</li>
@@ -83,11 +84,11 @@ export default class Paspol extends React.Component {
               <li>NEWS</li>
               <li>CONTACT</li>
             </ul>
-          </div>
+          </div> { /* header */ }
           <div className='imageSlideShow'>
-            <img id='slideshowPrev' src={image1} style={{opacity: 1}}/>
-            <img id='slideshowNext' src={image2} style={{opacity: 0}}/>
-          </div>
+            <img id='slideshowPrev' src={image1} style={{opacity: 1}} alt='背景画像です'/>
+            <img id='slideshowNext' src={image2} style={{opacity: 0}} alt='背景画像です'/>
+          </div> { /* imageSlideShow */ }
           <div className='declaration'>
             <div className='brief-text'>
               <p id='tabi'>旅に出よう。</p>
@@ -104,10 +105,55 @@ export default class Paspol extends React.Component {
               <p id='company-name'>「 PAS-POL 」</p>
               <p>それは、自分と世界を繋げる
               <br/>旅のモノづくりブランド</p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> { /* brief-text */ }
+          </div> { /* declaretion */ }
+        </div> { /* abovePage */ }
+        <div className='product-list'>
+          <div className='product-header'>
+            <div className='product-header-inner'>
+              <h2>PRODUCT</h2>
+              <span>
+                <p>MORE</p>
+              </span>
+            </div> { /* product-header-inner */ }
+          </div> { /* product-header */ }
+          <ul>
+            <div className='first-column'>
+              <div className='column-inner'>
+                <li>
+                  <img id='product-1'/>
+                  <h3>The world festival guide - 海外の音楽フェス完全ガイド -</h3>
+                </li>
+                <li>
+                  <img id='product-2'/>
+                  <h3>この世界で死ぬまでにしたいこと2000</h3>
+                </li>
+                <li>
+                  <img id='product-3'/>
+                  <h3>365日日本一周 絶景日めくりカレンダー</h3>
+                </li>
+              </div> { /* column-inner */ }
+            </div> { /* first-column */ }
+            <div className='second-column'>
+              <div className='column-inner'>
+                <li>
+                  <img id='product-4'/>
+                  <h3>Passport Notebooks series</h3>
+                </li>
+                <li>
+                  <img id='product-5'/>
+                  <h3>一人旅英会話Book</h3>
+                </li>
+                <li>
+                  <img id='product-6'/>
+                  <h3>日本の絶景ポストカード 春編</h3>
+                </li>
+              </div> { /* column-inner */ }
+            </div> { /* second-column */ }
+          </ul>
+        </div> {/* product-list */}
+      </div> {/* paspol */}
+      </>
     );
   }
 }
