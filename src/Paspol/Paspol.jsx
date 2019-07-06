@@ -68,6 +68,23 @@ export default class Paspol extends React.Component {
 
 
   render() {
+    const newsContents = [1, 2, 3, 4, 5].map(i => {
+      return (
+        <li key={i}>
+          <img/>
+          <div className='article-content'>
+            <h3>noteコラボ企画のお題「＃旅とわたし」の投稿が3000件突破！！</h3>
+            <p>
+              これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
+              これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
+              これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
+              これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
+              これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
+            </p>
+          </div>
+        </li>
+      )
+    })
     return (
       <>
       <div className='paspol'>
@@ -112,9 +129,7 @@ export default class Paspol extends React.Component {
           <div className='product-header'>
             <div className='product-header-inner'>
               <h2>PRODUCT</h2>
-              <span>
-                <p>MORE</p>
-              </span>
+              <p>MORE</p>
             </div> { /* product-header-inner */ }
           </div> { /* product-header */ }
           <ul>
@@ -152,6 +167,19 @@ export default class Paspol extends React.Component {
             </div> { /* second-column */ }
           </ul>
         </div> {/* product-list */}
+        <div className='news'>
+          <div className='news-header'>
+            <div className='news-header-inner'>
+              <h2>NEWS</h2>
+              <p>MORE</p>
+            </div> {/* news-header-inner */}
+          </div> {/* news-header */}
+          <div className='news-articles'>
+            <ul>
+              {newsContents}
+            </ul>
+          </div> {/* news-articles */}
+        </div> {/* news */}
       </div> {/* paspol */}
       </>
     );

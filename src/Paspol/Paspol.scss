@@ -4,6 +4,7 @@
   width: 100%;
   height: 1530px;
 }
+/********* 画像スライドショー *******/
 .imageSlideShow {
   img {
     height: 720px;
@@ -56,7 +57,7 @@
     }
   }
 }
-
+/************ 宣言文のスタイル ***********/
 .declaration {
   position: absolute;
   top: 720px;
@@ -86,6 +87,7 @@
     }
   }
 }
+/************ 商品紹介のスタイル ***********/
 .product-list {
   width: 100%;
   .product-header {
@@ -98,15 +100,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      span {
+      p {
         padding: 15px 50px;
         margin: 0;
         border: 1px solid black;
-        display: flex;
-        align-items: center;
-        p {
-          margin: 0;
-        }
       }
       h2 {
         font-size: 30px;
@@ -162,6 +159,69 @@
       }
       h3 {
         letter-spacing: 0.2em;
+      }
+    }
+  }
+}
+/************ お知らせのスタイル ***********/
+.news {
+  width: 100%;
+  height: 1800px;
+  background-color: rgb(243, 243, 243);
+  .news-header {
+    height: 75px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .news-header-inner {
+      margin: 20px 22%;
+      font-family: moon;
+      letter-spacing: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        padding: 15px 50px;
+        margin: 0;
+        border: 1px solid black;
+      }
+      h2 {
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+  }
+  .news-articles {
+    margin: 0 22%;
+    ul {
+      list-style: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 0px;
+      li {
+        display: flex;
+        letter-spacing: 0.1em;
+        margin-bottom: 50px;
+        .article-content {
+          width: 60%;
+          p {
+            font-size: 12px;
+            color: gray;
+          }
+          h3 {
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: 0.2em;
+          }
+        }
+        img {
+          background-image: url(../../public/image/paspol-article.jpg);
+          width: 40%;
+          height: 170px;
+          background-size: cover;
+          margin-right: 30px;
+        }
       }
     }
   }
