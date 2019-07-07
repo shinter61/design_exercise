@@ -81,7 +81,7 @@ export default class Paspol extends React.Component {
               これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
               これは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文ですこれは記事本文です
             </p>
-          </div>
+          </div> {/* article-content */}
         </li>
       )
     })
@@ -180,6 +180,21 @@ export default class Paspol extends React.Component {
             </ul>
           </div> {/* news-articles */}
         </div> {/* news */}
+        <div className='footer'>
+          <div className='share-by-sns'>
+            <div className='share-by-sns-inner'>
+              <ul>
+                <li id='facebook'>Share on Facebook</li>
+                <li id='twitter'>Share on Twitter</li>
+                <li id='hatebu'>Hatena Bookmark</li>
+              </ul>
+            </div>
+          </div> {/* share-by-sns */}
+          <div className='footer-links'>
+          </div> {/* fotter-links */}
+          <div className='paspol-footer'>
+          </div> {/* paspol-footer */}
+        </div> {/* footer */}
       </div> {/* paspol */}
       </>
     );
